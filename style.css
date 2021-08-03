@@ -1,5 +1,18 @@
 /* CSS FILE */ 
 
-#mainHeader{
+#jumboHeader{
     text-align: center;
+}
+
+#jumboP{
+    text-align: center;
+}
+
+#ticTacToeButton{
+    text-align: center;
+
+}
+
+#jumbotron{
+    background-color:aqua;
 }
