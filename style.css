@@ -16,3 +16,29 @@
 #jumbotron{
     background-color:aqua;
 }
+
+#colTest{
+    background-color: blueviolet;
+}
+
+#colTest2{
+    background-color: cadetblue;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+}
+
+td {
+    border: 10px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: cadetblue;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
