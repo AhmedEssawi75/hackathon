@@ -1,205 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
                 <nav class="navbar navbar-light" style="background-color: #00FFFF;">
                     <a class="navbar-brand" href="index.html">GameHub</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                      <ul class="navbar-nav">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="rps.html">Rock Paper Scissors</a>
-                        </li>
-                      </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="rps.html">Rock Paper Scissors</a>
+                            </li>
+                        </ul>
                     </div>
-                  </nav>
+                </nav>
             </div>
         </div>
     </div>
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-12">
-                <div class="jumbotron jumbotron-fluid"  id = "jumbotron1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid" id="jumbotron1">
                     <div class="container">
-                      <h1 class="display-4">Tic Tac Toe</h1>
-                      <p class="lead">Click on the Boxes to Play. Player 1 is X. Player 2 is O.</p>
+                        <h1 class="display-4">Tic Tac Toe</h1>
+                        <p class="lead">Click on the Boxes to Play. Player 1 is X. Player 2 is O.</p>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
-        <div class = "row">
-            <div class = "col-12">
-                <table class = "center">
+        <div class="row">
+            <div class="col-12">
+                <table class="center">
                     <tr>
-                        <td id = "a1"><h1 id = "b1"></h1></td>
-                        <td id = "a2"><h1 id = "b2"></h1></td>
-                        <td id = "a3"><h1 id = "b3"></h1></td>
+                        <td id="a1">
+                            <h1 id="b1"></h1>
+                        </td>
+                        <td id="a2">
+                            <h1 id="b2"></h1>
+                        </td>
+                        <td id="a3">
+                            <h1 id="b3"></h1>
+                        </td>
                     </tr>
                     <tr>
-                        <td id = "a4"><h1 id = "b4"></h1></td>
-                        <td id = "a5"><h1 id = "b5"></h1></td>
-                        <td id = "a6"><h1 id = "b6"></h1></td>
+                        <td id="a4">
+                            <h1 id="b4"></h1>
+                        </td>
+                        <td id="a5">
+                            <h1 id="b5"></h1>
+                        </td>
+                        <td id="a6">
+                            <h1 id="b6"></h1>
+                        </td>
                     </tr>
                     <tr>
-                        <td id = "a7"><h1 id = "b7"></h1></td>
-                        <td id = "a8"><h1 id = "b8"></h1></td>
-                        <td id = "a9"><h1 id = "b9"></h1></td>
+                        <td id="a7">
+                            <h1 id="b7"></h1>
+                        </td>
+                        <td id="a8">
+                            <h1 id="b8"></h1>
+                        </td>
+                        <td id="a9">
+                            <h1 id="b9"></h1>
+                        </td>
                     </tr>
-                </table>                
+                </table>
             </div>
         </div>
     </div>
     <script>
-        for(var i = 0; i<9; i++)
-        {
-            if(i == 0 || i == 2 || i == 4 || i == 6 || i ==8)
-            {
+        $("#a1").on("click", function () {
+             $("#b1").text("X");
+        });
+        $("#a2").on("click", function () {
+            $("#b2").text("O");
+        });
+        
+        /*
+        var playerTurn = 0;
+        function userInput() {
+            var loopStop = 0;
+            var currentPlayer = "X";
 
-                if($("#b1").is(':empty'))
-                {
-                    $("#a1").on("click", function(){
+            if (playerTurn == 0 || playerTurn == 2 || playerTurn == 4 || playerTurn == 6 || playerTurn == 8) {
+                if ($("#b1").is(':empty')) {
+                    $("#a1").on("click", function () {
                         $("#b1").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b2").is(':empty'))
-                {
 
-                    $("#a2").on("click", function(){
+                else if ($("#b2").is(':empty')) {
+                    $("#a2").on("click", function () {
                         $("#b2").text("X");
-
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b3").is(':empty'))
-                {
-                    $("#a3").on("click", function(){
+                else if ($("#b3").is(':empty')) {
+                    $("#a3").on("click", function () {
                         $("#b3").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b4").is(':empty'))
-                {
-                    $("#a4").on("click", function(){
+
+                else if ($("#b4").is(':empty')) {
+                    $("#a4").on("click", function () {
                         $("#b4").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b5").is(':empty'))
-                {
-                    $("#a5").on("click", function(){
+
+                else if ($("#b5").is(':empty')) {
+                    $("#a5").on("click", function () {
                         $("#b5").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b6").is(':empty'))
-                {
-                    $("#a6").on("click", function(){
+
+                else if ($("#b6").is(':empty')) {
+                    $("#a6").on("click", function () {
                         $("#b6").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b7").is(':empty'))
-                {
-                    $("#a7").on("click", function(){
+
+                else if ($("#b7").is(':empty')) {
+                    $("#a7").on("click", function () {
                         $("#b7").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b8").is(':empty'))
-                {
-                    $("#a8").on("click", function(){
+
+
+                else if ($("#b8").is(':empty')) {
+                    $("#a8").on("click", function () {
                         $("#b8").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else if($("#b9").is(':empty'))
-                {
-                    $("#a9").on("click", function(){
+
+                else if ($("#b9").is(':empty')) {
+                    $("#a9").on("click", function () {
                         $("#b9").text("X");
                     });
+                    currentPlayer = "O";
                 }
-                else
-                {
+                else {
                     console.log("hi");
                 }
+
+
+
             }
-            else if(i == 1 || i == 3 || i == 5 || i == 7)
-            {
-                if($("#b1").is(':empty'))
-                {
-                    $("#a1").on("click", function(){
+            else if (playerTurn == 1 || playerTurn == 3 || playerTurn == 5 || playerTurn == 7) {
+                if ($("#b1").is(':empty')) {
+                    $("#a1").on("click", function () {
                         $("#b1").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b2").is(':empty'))
-                {
-                    $("#a2").on("click", function(){
+                else if ($("#b2").is(':empty')) {
+                    $("#a2").on("click", function () {
                         $("b2").text("O");
                     });
+                    currentPlayer = "X";
 
                 }
-                else if($("#b3").is(':empty'))
-                {
-                    $("#a3").on("click", function(){
+                else if ($("#b3").is(':empty')) {
+                    $("#a3").on("click", function () {
                         $("#b3").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b4").is(':empty'))
-                {
-                    $("#a4").on("click", function(){
+                else if ($("#b4").is(':empty')) {
+                    $("#a4").on("click", function () {
                         $("#b4").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b5").is(':empty'))
-                {
-                    $("#a5").on("click", function(){
+                else if ($("#b5").is(':empty')) {
+                    $("#a5").on("click", function () {
                         $("#b5").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b6").is(':empty'))
-                {
-                    $("#a6").on("click", function(){
+                else if ($("#b6").is(':empty')) {
+                    $("#a6").on("click", function () {
                         $("#b6").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b7").is(':empty'))
-                {
-                    $("#a7").on("click", function(){
+                else if ($("#b7").is(':empty')) {
+                    $("#a7").on("click", function () {
                         $("#b7").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b8").is(':empty'))
-                {
-                    $("#a8").on("click", function(){
+                else if ($("#b8").is(':empty')) {
+                    $("#a8").on("click", function () {
                         $("#b8").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else if($("#b9").is(':empty'))
-                {
-                    $("#a9").on("click", function(){
+                else if ($("#b9").is(':empty')) {
+                    $("#a9").on("click", function () {
                         $("#b9").text("O");
                     });
+                    currentPlayer = "X";
                 }
-                else
-                {
+                else {
                     console.log("hi");
                 }
-                
+
             }
-            else
-            {
-              console.log("game over");
+            else {
+                console.log("game over");
             }
-        } 
+
+
+
+        }
+        var j = 0;
+        while (j < 9) {
+            userInput();
+            playerTurn++;
+            j++;
+        }
+        */
+        
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
