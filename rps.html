@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!--Bootstrap Grid Layout-->
     <div class = "container">
         <div class = "row">
             <div class = "col-12">
+                <!--NavBar-->
                 <nav class="navbar navbar-light" style="background-color: #00FFFF;">
                     <a class="navbar-brand" href="index.html">GameHub</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +36,7 @@
         </div>
         <div class = "row">
             <div class = "col-12">
+                <!--Jumbotron-->
                 <div class="jumbotron jumbotron-fluid" id = "jumbotron2">
                     <div class="container">
                       <h1 class="display-4">Rock Paper Scissors</h1>
@@ -44,6 +47,7 @@
         </div>
         <div class = "row">
             <div class = "col-4">
+                <!--Image and win count declaration-->
                 <img src="https://previews.123rf.com/images/sukanda26/sukanda261601/sukanda26160100563/51558257-stamp-word-you-win-in-red-over-white-background.jpg" id = "winIMG" width = "400" height = "300">
             </div>
             <div class = "col-4">
@@ -61,10 +65,11 @@
 
     <script>
 
+    //Hide both images
        $("#winIMG").hide();
        $("#loseIMG").hide();
 
-
+        //declare variables
         var keypressed;
         var rockPaperScissors = ["r", "p", "s"];
         var computerChoice;
@@ -72,10 +77,12 @@
         var loseCount = 0;
         var drawCount = 0;
 
+        //listen for keypress
         document.onkeydown = function (event) {
             keyPressed = event.key;
+            //random computer choice generation
             computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-
+            //conditional based on key press and computer choice
             if (keyPressed == "r" && computerChoice == "s") {
                 $("#loseIMG").hide();
                 $("#winIMG").show();
@@ -109,6 +116,8 @@
             else if (keyPressed == compuerChoice) {
                 drawCount++;
             }
+
+            //display win,draw,loss count
 
             $("#winCount").text("Wins: " + winCount);
             $("#loseCount").text("Losses: " + loseCount);

@@ -11,9 +11,12 @@
 </head>
 
 <body>
+
+    <!--Boostrap grid layout-->
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <!--navbar-->
                 <nav class="navbar navbar-light" style="background-color: #00FFFF;">
                     <a class="navbar-brand" href="index.html">GameHub</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -37,6 +40,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <!--Jumbotron-->
                 <div class="jumbotron jumbotron-fluid" id="jumbotron1">
                     <div class="container">
                         <h1 class="display-4">Tic Tac Toe</h1>
@@ -45,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <!--identifiying all squared on grid-->
         <div class="row">
             <div class="col-12">
                 <table class="center">
@@ -86,13 +91,14 @@
         </div>
     </div>
     <script>
+        //functional preview code
         $("#a1").on("click", function () {
              $("#b1").text("X");
         });
         $("#a2").on("click", function () {
             $("#b2").text("O");
         });
-        
+        //dysfunctional attempted code
         /*
         var playerTurn = 0;
         function userInput() {
