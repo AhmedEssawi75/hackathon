@@ -42,26 +42,159 @@
             <div class = "col-12">
                 <table class = "center">
                     <tr>
-                        <td id = "tb11"><h1 id = "11"></h1></td>
-                        <td id = "tb12"><h1 id = "12"></h1></td>
-                        <td id = "tb13"><h1 id = "13"></h1></td>
+                        <td id = "a1"><h1 id = "b1">X</h1></td>
+                        <td id = "a2"><h1 id = "b2">X</h1></td>
+                        <td id = "a3"><h1 id = "b3">O</h1></td>
                     </tr>
                     <tr>
-                        <td id = "tb21"><h1 id = "21"></h1></td>
-                        <td id = "tb22"><h1 id = "22"></h1></td>
-                        <td id = "tb23"><h1 id = "23"></h1></td>
+                        <td id = "a4"><h1 id = "b4">O</h1></td>
+                        <td id = "a5"><h1 id = "b5">X</h1></td>
+                        <td id = "a6"><h1 id = "b6">O</h1></td>
                     </tr>
                     <tr>
-                        <td id = "tb31"><h1 id = "31"></h1></td>
-                        <td id = "tb32"><h1 id = "32"></h1></td>
-                        <td id = "tb33"><h1 id = "33"></h1></td>
+                        <td id = "a7"><h1 id = "b7">X</h1></td>
+                        <td id = "a8"><h1 id = "b8">O</h1></td>
+                        <td id = "a9"><h1 id = "b9">X</h1></td>
                     </tr>
                 </table>                
             </div>
         </div>
     </div>
     <script>
-        
+        for(var i = 0; i<9; i++)
+        {
+            if(i == 0 || i == 2 || i == 4 || i == 6 || i ==8)
+            {
+
+                if($("#b1").is(':empty'))
+                {
+                    $("#a1").on("click", function(){
+                        $("#b1").text("X");
+                    });
+                }
+                else if($("#b2").is(':empty'))
+                {
+
+                    $("#a2").on("click", function(){
+                        $("#b2").text("X");
+
+                    });
+                }
+                else if($("#b3").is(':empty'))
+                {
+                    $("#a3").on("click", function(){
+                        $("#b3").text("X");
+                    });
+                }
+                else if($("#b4").is(':empty'))
+                {
+                    $("#a4").on("click", function(){
+                        $("#b4").text("X");
+                    });
+                }
+                else if($("#b5").is(':empty'))
+                {
+                    $("#a5").on("click", function(){
+                        $("#b5").text("X");
+                    });
+                }
+                else if($("#b6").is(':empty'))
+                {
+                    $("#a6").on("click", function(){
+                        $("#b6").text("X");
+                    });
+                }
+                else if($("#b7").is(':empty'))
+                {
+                    $("#a7").on("click", function(){
+                        $("#b7").text("X");
+                    });
+                }
+                else if($("#b8").is(':empty'))
+                {
+                    $("#a8").on("click", function(){
+                        $("#b8").text("X");
+                    });
+                }
+                else if($("#b9").is(':empty'))
+                {
+                    $("#a9").on("click", function(){
+                        $("#b9").text("X");
+                    });
+                }
+                else
+                {
+                    console.log("hi");
+                }
+            }
+            else if(i == 1 || i == 3 || i == 5 || i == 7)
+            {
+                if($("#b1").is(':empty'))
+                {
+                    $("#a1").on("click", function(){
+                        $("#b1").text("O");
+                    });
+                }
+                else if($("#b2").is(':empty'))
+                {
+                    $("#a2").on("click", function(){
+                        $("b2").text("O");
+                    });
+
+                }
+                else if($("#b3").is(':empty'))
+                {
+                    $("#a3").on("click", function(){
+                        $("#b3").text("O");
+                    });
+                }
+                else if($("#b4").is(':empty'))
+                {
+                    $("#a4").on("click", function(){
+                        $("#b4").text("O");
+                    });
+                }
+                else if($("#b5").is(':empty'))
+                {
+                    $("#a5").on("click", function(){
+                        $("#b5").text("O");
+                    });
+                }
+                else if($("#b6").is(':empty'))
+                {
+                    $("#a6").on("click", function(){
+                        $("#b6").text("O");
+                    });
+                }
+                else if($("#b7").is(':empty'))
+                {
+                    $("#a7").on("click", function(){
+                        $("#b7").text("O");
+                    });
+                }
+                else if($("#b8").is(':empty'))
+                {
+                    $("#a8").on("click", function(){
+                        $("#b8").text("O");
+                    });
+                }
+                else if($("#b9").is(':empty'))
+                {
+                    $("#a9").on("click", function(){
+                        $("#b9").text("O");
+                    });
+                }
+                else
+                {
+                    console.log("hi");
+                }
+                
+            }
+            else
+            {
+              console.log("game over");
+            }
+        } 
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

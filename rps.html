@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4">Rock Paper Scissors</h1>
+                      <p class="lead">Click "r", "p", or "s" to play!</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-4">
+                <img src="https://previews.123rf.com/images/sukanda26/sukanda261601/sukanda26160100563/51558257-stamp-word-you-win-in-red-over-white-background.jpg" id = "winIMG" width = "400" height = "300">
+            </div>
+            <div class = "col-4">
+                <h1 id = "winCount">Wins: 0</h1>
+                <h1 id = "drawCount">Draws: 0</h1>
+                <h1 id = "loseCount">Losses: 0</h1>
+            </div>
+            <div class = "col-4">
+                <img src="http://thebenefitsourcellc.com/wp-content/uploads/2018/02/Screen-Shot-2018-02-20-at-4.17.38-PM.png" id = "loseIMG">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+       $("#winIMG").hide();
+       $("#loseIMG").hide();
+
+
+        var keypressed;
+        var rockPaperScissors = ["r", "p", "s"];
+        var computerChoice;
+        var winCount = 0;
+        var loseCount = 0;
+        var drawCount = 0;
+
+        document.onkeydown = function (event) {
+            keyPressed = event.key;
+            computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+
+            if (keyPressed == "r" && computerChoice == "s") {
+                $("#loseIMG").hide();
+                $("#winIMG").show();
+                winCount++;
+            }
+            else if (keyPressed == "r" && computerChoice == "p") {
+                $("#winIMG").hide();
+                $("#loseIMG").show();
+                loseCount++;
+            }
+            else if (keyPressed == "p" && computerChoice == "r") {
+                $("#loseIMG").hide();
+                $("#winIMG").show();
+                winCount++;
+            }
+            else if (keyPressed == "p" && computerChoice == "s") {
+                $("#winIMG").hide();
+                $("#loseIMG").show();
+                loseCount++;
+            }
+            else if (keyPressed == "s" && computerChoice == "r") {
+                $("#winIMG").hide();
+                $("#loseIMG").show();
+                loseCount++;
+            }
+            else if (keyPressed == "s" && computerChoice == "p") {
+                $("#loseIMG").hide();
+                $("#winIMG").show();
+                winCount++;
+            }
+            else if (keyPressed == compuerChoice) {
+                drawCount++;
+            }
+
+            $("#winCount").text("Wins: " + winCount);
+            $("#loseCount").text("Losses: " + loseCount);
+            $("#drawCount").text("Draws: " + drawCount);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
