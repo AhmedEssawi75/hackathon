@@ -13,7 +13,13 @@
 
 }
 
-#jumbotron{
+#jumbotron1{
+    background-color:aqua;
+}
+#jumbotron2{
+    background-color:aqua;
+}
+#jumbotron3{
     background-color:aqua;
 }
 
@@ -32,8 +38,8 @@ h1{
 
 td {
     border: 10px solid black;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     background-color: cadetblue;
 }
 
@@ -45,4 +51,8 @@ td {
 
 p{
     text-align:center;
+}
+
+body{
+    background-color:aquamarine;
 }
